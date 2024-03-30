@@ -1,0 +1,39 @@
+.page__button-submit {
+  width: 75px;
+  height: 75px;
+  background-color: rgba(23, 23, 23, 0.38);
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__button-submit::after {
+  content: "";
+  background-image: url(../../../images/search.svg);
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 1439px) {
+  .page__button-submit {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page__button-submit {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+  }
+
+  .page__button-submit::after {
+    background-image: url(../../../images/search-mobile.svg);
+    width: 13px;
+    height: 13px;
+  }
+}

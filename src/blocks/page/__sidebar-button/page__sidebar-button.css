@@ -1,0 +1,31 @@
+.page__sidebar-button {
+  border: 0;
+  padding: 0;
+  width: 203px;
+  height: 75px;
+  background-color: rgba(23, 23, 23, 0.38);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+  right: 112px;
+}
+
+@media (max-width: 1439px) {
+  .page__sidebar-button {
+    bottom: 50px;
+    right: 75px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page__sidebar-button {
+    position: static;
+    margin: 0 auto 20px;
+    display: block;
+    font-size: 15px;
+  }
+}

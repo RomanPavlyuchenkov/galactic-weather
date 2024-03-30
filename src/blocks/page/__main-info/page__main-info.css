@@ -1,0 +1,22 @@
+.page__main-info {
+  position: absolute;
+  bottom: 81px;
+  left: 68px;
+  display: flex;
+}
+
+@media (max-width: 1439px) {
+  .page__main-info {
+    top: 40%;
+    left: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page__main-info {
+    flex-direction: row;
+    align-items: center;
+    top: 154px;
+    left: 21px;
+  }
+}

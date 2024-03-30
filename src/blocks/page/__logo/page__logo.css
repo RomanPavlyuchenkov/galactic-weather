@@ -1,0 +1,11 @@
+.page__logo {
+  position: absolute;
+  top: 20px;
+  left: 27px;
+}
+
+@media (max-width: 1439px) {
+  .page__logo {
+    visibility: hidden;
+  }
+}

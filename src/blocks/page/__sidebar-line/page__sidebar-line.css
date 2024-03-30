@@ -1,0 +1,20 @@
+.page__sidebar-line {
+  border-bottom: 1px solid #fff;
+  width: 383px;
+  display: block;
+  margin: 80px auto 34px;
+}
+
+@media (max-width: 1439px) {
+  .page__sidebar-line {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page__sidebar-line {
+    position: static;
+    margin: 20px auto 20px;
+    width: 300px;
+  }
+}

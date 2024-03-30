@@ -1,0 +1,24 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../blocks/page/page.css);
+/* Контейнер */
+@import url(../blocks/page/__container/page__conatiner.css);
+@import url(../blocks/page/__logo/page__logo.css);
+@import url(../blocks/page/__main-info/page__main-info.css);
+@import url(../blocks/page/__main-info-temp/page__main-info-temp.css);
+@import url(../blocks/page/__main-info-citi/page__main-info-citi.css);
+@import url(../blocks/page/__main-info-condition/page__main-info-condition.css);
+@import url(../blocks/page/__main-info-date/page__main-info-date.css);
+/* Боковая панель */
+@import url(../blocks/page/__sidebar/page__sidebar.css);
+@import url(../blocks/page/__form/page__form.css);
+@import url(../blocks/page/__input/page__input.css);
+@import url(../blocks/page/__button-submit/page__button-submit.css);
+@import url(../blocks/page/__cities/page__cities.css);
+@import url(../blocks/page/__sidebar-line/page__sidebar-line.css);
+@import url(../blocks/page/__details/page__details.css);
+@import url(../blocks/page/__details-li/page__details-li.css);
+@import url(../blocks/page/__sidebar-button/page__sidebar-button.css);
+@import url(../blocks/page/__main-info-citi-date/page__main-info-citi-date.css);
+/* Мобильная версия */
+@import url(../blocks/page/__mobile-background/page__mobile-background.css);

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galactic-weather</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__container">
+        <div class="page__mobile-background">
+          <img class="page__logo" src="./images/logo.png" alt="logo" />
+          <!--  Температура и основная инфа -->
+          <div class="page__main-info">
+            <p class="page__main-info-temp">10&deg</p>
+            <div class="page__main-info-citi-date">
+              <h1 class="page__main-info-citi">Rostov-on-Don</h1>
+              <p class="page__main-info-condition">Переменная облачность</p>
+              <p class="page__main-info-date">2024-03-27 19:19</p>
+            </div>
+          </div>
+        </div>
+        <!--  Боковая панель -->
+        <div class="page__sidebar">
+          <form class="page__form">
+            <input
+              class="page__input"
+              placeholder="Введите название города"
+              type="text"
+            />
+            <button class="page__button-submit"></button>
+          </form>
+          <ul class="page__cities">
+            <li>Другие города</li>
+            <li>Шахтерск</li>
+            <li>Ростов-на-Дону</li>
+            <li>Курск</li>
+          </ul>
+          <span class="page__sidebar-line"></span>
+          <ul class="page__details">
+            <li>Детали Погоды</li>
+            <li class="page__details-li">
+              Облачность<span class="page__details-span">86%</span>
+            </li>
+            <li class="page__details-li">
+              Ветер<span class="page__details-span">10 м/c</span>
+            </li>
+          </ul>
+          <button class="page__sidebar-button">Погода на завтра</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
