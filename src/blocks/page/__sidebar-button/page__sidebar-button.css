@@ -10,13 +10,12 @@
   color: #fff;
   cursor: pointer;
   position: absolute;
-  bottom: 80px;
+  bottom: 50px;
   right: 112px;
 }
 
 @media (max-width: 1439px) {
   .page__sidebar-button {
-    bottom: 50px;
     right: 75px;
   }
 }

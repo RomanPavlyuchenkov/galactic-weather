@@ -1,0 +1,7 @@
+@media (max-width: 1100px) {
+  .page__container-cities-ditails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}

@@ -1,5 +1,5 @@
 @media (max-width: 1100px) {
-  .page__main-info-citi-date {
+  .page__main-info-city-date {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 1100px) {
-  .page__main-info-citi-date {
+  .page__main-info-city-date {
     align-items: start;
   }
 }

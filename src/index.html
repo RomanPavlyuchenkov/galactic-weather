@@ -13,11 +13,11 @@
           <img class="page__logo" src="./images/logo.png" alt="logo" />
           <!--  Температура и основная инфа -->
           <div class="page__main-info">
-            <p class="page__main-info-temp">10&deg</p>
-            <div class="page__main-info-citi-date">
-              <h1 class="page__main-info-citi">Rostov-on-Don</h1>
-              <p class="page__main-info-condition">Переменная облачность</p>
-              <p class="page__main-info-date">2024-03-27 19:19</p>
+            <p class="page__main-info-temp"></p>
+            <div class="page__main-info-city-date">
+              <h1 class="page__main-info-city"></h1>
+              <p class="page__main-info-condition"></p>
+              <p class="page__main-info-date"></p>
             </div>
           </div>
         </div>
@@ -31,25 +31,30 @@
             />
             <button class="page__button-submit"></button>
           </form>
-          <ul class="page__cities">
-            <li>Другие города</li>
-            <li>Шахтерск</li>
-            <li>Ростов-на-Дону</li>
-            <li>Курск</li>
-          </ul>
-          <span class="page__sidebar-line"></span>
-          <ul class="page__details">
-            <li>Детали Погоды</li>
-            <li class="page__details-li">
-              Облачность<span class="page__details-span">86%</span>
-            </li>
-            <li class="page__details-li">
-              Ветер<span class="page__details-span">10 м/c</span>
-            </li>
-          </ul>
+          <div class="page__container-cities-ditails">
+            <ul class="page__cities">
+              <li>Другие города</li>
+              <li class="page__cities-shk">Шахтерск/Донецк</li>
+              <li class="page__cities-rnd">Ростов-на-Дону</li>
+              <li class="page__cities-kursk">Курск</li>
+            </ul>
+            <span class="page__sidebar-line"></span>
+            <ul class="page__details">
+              <li>Детали Погоды</li>
+              <li class="page__details-li">
+                Облачность<span
+                  class="page__details-span page__details-cloud"
+                ></span>
+              </li>
+              <li class="page__details-li">
+                Ветер<span class="page__details-span page__details-vind"></span>
+              </li>
+            </ul>
+          </div>
           <button class="page__sidebar-button">Погода на завтра</button>
         </div>
       </div>
     </div>
+    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>
