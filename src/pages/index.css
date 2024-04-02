@@ -20,6 +20,10 @@
 @import url(../blocks/page/__details-li/page__details-li.css);
 @import url(../blocks/page/__sidebar-button/page__sidebar-button.css);
 @import url(../blocks/page/__main-info-city-date/page__main-info-city-date.css);
+/* Погода на завтра */
+@import url(../blocks/page/__weather-tomorrow/page__weather-tomorrow.css);
+@import url(../blocks/page/__weather-tomorrow-info/page__weather-tomorrow-info.css);
+@import url(../blocks/page/__weather-tomorrow-ul/page__weather-tomorrow-ul.css);
 /* Мобильная версия */
 @import url(../blocks/page/__mobile-background/page__mobile-background.css);
 @import url(../blocks/page/__container-cities-ditails/page__container-cities-ditails.css);

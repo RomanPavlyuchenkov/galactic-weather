@@ -1,9 +1,15 @@
+import "../pages/index.css";
 import WeatherApi from "../components/WeatherApi.js";
 import InfoWeather from "../components/InfoWeather.js";
 import SubmitCity from "../components/SubmitCity.js";
-import { kursk, shakhtersk, rostov } from "../utils/constants.js";
+import WeatherTomorrow from "../components/WeatherTomorrow.js";
+import {
+  kursk,
+  shakhtersk,
+  rostov,
+  weatherTomorrow,
+} from "../utils/constants.js";
 const weatherApi = new WeatherApi({
-  url: "https://api.weatherapi.com/v1/current.json?key=",
   authorization: "0d448b1511434f5e8ba121723242703",
 });
 
@@ -15,6 +21,7 @@ const infoWeather = new InfoWeather({
   date: ".page__main-info-date",
   cloud: ".page__details-cloud",
   vind: ".page__details-vind",
+  handleShowWeatherTomorrow,
 });
 
 weatherApi
@@ -62,3 +69,22 @@ const submitСity = new SubmitCity(".page__form", (city) => {
     .catch((err) => console.log(`catch: ${err}`));
 });
 submitСity.sendForm();
+
+//Погода на завтра
+
+function handleShowWeatherTomorrow(city) {
+  weatherApi
+    .getWeatherForecast(city)
+    .then((forecast) => {
+      console.log(forecast.forecast.forecastday);
+      forecast.forecast.forecastday.forEach((item) => renderElement(item));
+    })
+    .catch((err) => console.log(`catch: ${err}`));
+}
+
+function renderElement(element) {
+  const card = new WeatherTomorrow(".template-weather-tomorrow", element);
+  const cardElement = card.createCard();
+
+  weatherTomorrow.prepend(cardElement);
+}

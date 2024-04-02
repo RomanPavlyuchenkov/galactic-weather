@@ -6,6 +6,7 @@ export default class InfoWeather {
     this._date = document.querySelector(data.date);
     this._cloud = document.querySelector(data.cloud);
     this._vind = document.querySelector(data.vind);
+    this._handleShowWeatherTomorrow = data.handleShowWeatherTomorrow;
   }
   setWeatherInfo(weather) {
     // Math.trunc делает целое число
@@ -18,5 +19,10 @@ export default class InfoWeather {
     this._date.textContent = weather.location.localtime;
     this._cloud.textContent = `${weather.current.cloud}%`;
     this._vind.textContent = `${weather.current.wind_mph} м/c`;
+    this._showWeatherTomorrow(weather.location.name);
+  }
+
+  _showWeatherTomorrow(city) {
+    this._handleShowWeatherTomorrow(city);
   }
 }

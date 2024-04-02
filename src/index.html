@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galactic-weather</title>
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
     <div class="page">
       <div class="page__container">
         <div class="page__mobile-background">
-          <img class="page__logo" src="./images/logo.png" alt="logo" />
+          <img
+            class="page__logo"
+            src="<%=require('./images/logo.png')%>"
+            alt="logo"
+          />
           <!--  Температура и основная инфа -->
           <div class="page__main-info">
             <p class="page__main-info-temp"></p>
@@ -53,8 +56,19 @@
           </div>
           <button class="page__sidebar-button">Погода на завтра</button>
         </div>
+        <!--  Погода на завтра -->
+        <div class="page__weather-tomorrow">
+          <template class="template-weather-tomorrow">
+            <div class="page__weather-tomorrow-info">
+              <ul class="page__weather-tomorrow-ul">
+                <li class="page__weather-tomorrow-date"></li>
+                <li class="page__weather-tomorrow-condition"></li>
+                <li class="page__weather-tomorrow-temp"></li>
+              </ul>
+            </div>
+          </template>
+        </div>
       </div>
     </div>
-    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>

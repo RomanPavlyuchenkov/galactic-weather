@@ -1,0 +1,7 @@
+.page__weather-tomorrow-info {
+  width: 320px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7px;
+}
