@@ -8,6 +8,8 @@ import {
   shakhtersk,
   rostov,
   weatherTomorrow,
+  weatherTomorrowButton,
+  weatherMain,
 } from "../utils/constants.js";
 const weatherApi = new WeatherApi({
   authorization: "0d448b1511434f5e8ba121723242703",
@@ -76,15 +78,22 @@ function handleShowWeatherTomorrow(city) {
   weatherApi
     .getWeatherForecast(city)
     .then((forecast) => {
-      console.log(forecast.forecast.forecastday);
-      forecast.forecast.forecastday.forEach((item) => renderElement(item));
+      forecast.forecast.forecastday
+        .reverse()
+        .forEach((item) => renderElement(item));
     })
     .catch((err) => console.log(`catch: ${err}`));
 }
 
 function renderElement(element) {
-  const card = new WeatherTomorrow(".template-weather-tomorrow", element);
+  const card = new WeatherTomorrow(
+    ".template-weather-tomorrow",
+    element,
+    weatherTomorrow,
+    weatherTomorrowButton,
+    weatherMain
+  );
   const cardElement = card.createCard();
-
   weatherTomorrow.prepend(cardElement);
+  card.clearContainer();
 }

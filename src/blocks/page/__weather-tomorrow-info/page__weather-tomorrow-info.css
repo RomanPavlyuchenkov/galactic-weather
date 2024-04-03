@@ -1,7 +1,13 @@
 .page__weather-tomorrow-info {
-  width: 320px;
+  width: 300px;
   border-bottom: 1px solid #fff;
   display: flex;
   justify-content: center;
   margin-bottom: 7px;
+}
+
+@media (max-width: 499px) {
+  .page__weather-tomorrow-info {
+    margin-bottom: 4px;
+  }
 }

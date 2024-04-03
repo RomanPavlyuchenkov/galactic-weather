@@ -1,5 +1,27 @@
 .page__weather-tomorrow {
   position: absolute;
-  left: 0;
-  top: 30%;
+  left: 68px;
+  bottom: 30%;
+  visibility: hidden;
+}
+
+@media (max-width: 1439px) {
+  .page__weather-tomorrow {
+    bottom: 5%;
+    left: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page__weather-tomorrow {
+    top: 100px;
+    left: 21px;
+  }
+}
+
+@media (max-width: 499px) {
+  .page__weather-tomorrow {
+    top: 40px;
+    left: 10px;
+  }
 }
