@@ -22,7 +22,7 @@
 .page__weather-tomorrow{bottom:30%;left:68px;position:absolute;visibility:hidden}@media (max-width:1439px){.page__weather-tomorrow{bottom:5%;left:10px}}@media (max-width:1100px){.page__weather-tomorrow{left:21px;top:100px}}@media (max-width:499px){.page__weather-tomorrow{left:10px;top:40px}}
 .page__weather-tomorrow-info{border-bottom:1px solid #fff;display:flex;justify-content:center;margin-bottom:7px;width:300px}@media (max-width:499px){.page__weather-tomorrow-info{margin-bottom:4px}}
 .page__weather-tomorrow-ul{color:#fff;font-family:Inter,sans-serif;font-size:15px;font-weight:400;list-style:none;margin:0;padding:0;text-align:center}.page__weather-tomorrow-ul li{margin-bottom:7px}@media (max-width:499px){.page__weather-tomorrow-ul li{margin-bottom:4px}}
-.page__weather-tomorrow_active{visibility:visible}
+.page__weather-tomorrow_active{height:242px;visibility:visible}
 @media (max-width:1100px){.page__mobile-background{background-image:url(8c220ab29238c38e14ad.jpg);background-position:50%;background-repeat:no-repeat;background-size:cover;height:400px;position:relative;width:100%}}@media (max-width:499px){.page__mobile-background{height:250px}}
 @media (max-width:1100px){.page__container-cities-ditails{display:flex;justify-content:space-between;margin-bottom:20px}}
 
