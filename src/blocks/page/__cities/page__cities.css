@@ -9,12 +9,12 @@
 }
 .page__cities li:first-child {
   font-size: 20px;
+  cursor: auto;
 }
 .page__cities li {
   margin-bottom: 26px;
   cursor: pointer;
 }
-
 .page__cities li:last-child {
   margin: 0;
 }

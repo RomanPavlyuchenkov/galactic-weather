@@ -3,6 +3,8 @@
   bottom: 81px;
   left: 68px;
   display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 1439px) {

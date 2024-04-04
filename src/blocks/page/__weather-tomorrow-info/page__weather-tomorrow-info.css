@@ -5,9 +5,3 @@
   justify-content: center;
   margin-bottom: 7px;
 }
-
-@media (max-width: 499px) {
-  .page__weather-tomorrow-info {
-    margin-bottom: 4px;
-  }
-}

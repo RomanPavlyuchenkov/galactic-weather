@@ -1,5 +1,7 @@
 @media (max-width: 1100px) {
   .page__main-info_hiden {
     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.4s, opacity 0.4s linear;
   }
 }

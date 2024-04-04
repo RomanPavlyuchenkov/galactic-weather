@@ -3,11 +3,11 @@ import WeatherApi from "../components/WeatherApi.js";
 import InfoWeather from "../components/InfoWeather.js";
 import SubmitCity from "../components/SubmitCity.js";
 import WeatherTomorrow from "../components/WeatherTomorrow.js";
+import Section from "../components/Section.js";
 import {
   kursk,
   shakhtersk,
   rostov,
-  weatherTomorrow,
   weatherTomorrowButton,
   weatherMain,
 } from "../utils/constants.js";
@@ -77,23 +77,27 @@ submitСity.sendForm();
 function handleShowWeatherTomorrow(city) {
   weatherApi
     .getWeatherForecast(city)
+    .then(renderCard.clearContainer())
     .then((forecast) => {
       forecast.forecast.forecastday
         .reverse()
         .forEach((item) => renderElement(item));
+      renderCard.addDays();
     })
     .catch((err) => console.log(`catch: ${err}`));
 }
 
 function renderElement(element) {
-  const card = new WeatherTomorrow(
-    ".template-weather-tomorrow",
-    element,
-    weatherTomorrow,
-    weatherTomorrowButton,
-    weatherMain
-  );
+  const card = new WeatherTomorrow(".template-weather-tomorrow", element);
   const cardElement = card.createCard();
-  weatherTomorrow.prepend(cardElement);
-  card.clearContainer();
+  renderCard.addItem(cardElement);
 }
+
+const renderCard = new Section(
+  renderElement,
+  ".page__weather-tomorrow",
+  weatherTomorrowButton,
+  weatherMain
+);
+
+renderCard.handleShowWather();

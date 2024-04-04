@@ -1,4 +1,5 @@
 .page__weather-tomorrow_active {
   visibility: visible;
+  opacity: 1;
   height: 242px;
 }

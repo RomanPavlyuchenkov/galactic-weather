@@ -3,6 +3,8 @@
   left: 68px;
   bottom: 30%;
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s linear;
 }
 
 @media (max-width: 1439px) {
@@ -21,7 +23,6 @@
 
 @media (max-width: 499px) {
   .page__weather-tomorrow {
-    top: 40px;
     left: 10px;
   }
 }
