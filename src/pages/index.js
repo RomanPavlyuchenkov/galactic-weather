@@ -4,6 +4,7 @@ import InfoWeather from "../components/InfoWeather.js";
 import SubmitCity from "../components/SubmitCity.js";
 import WeatherTomorrow from "../components/WeatherTomorrow.js";
 import Section from "../components/Section.js";
+import UserIpApi from "../components/UserIpApi.js";
 import {
   kursk,
   shakhtersk,
@@ -15,6 +16,25 @@ const weatherApi = new WeatherApi({
   authorization: "0d448b1511434f5e8ba121723242703",
 });
 
+//Получаем  Ip пользавтеля
+const userIp = new UserIpApi({ url: "http://api.sypexgeo.net/" });
+userIp
+  .getIp()
+  .then((ip) => {
+    loadingPage(ip.city.name_en);
+  })
+  .catch((err) => console.log(`catch: ${err}`));
+
+//Загружаем страницу
+function loadingPage(city) {
+  weatherApi
+    .getWeatherInfo(city)
+    .then((weather) => {
+      infoWeather.setWeatherInfo(weather);
+    })
+    .catch((err) => console.log(`catch: ${err}`));
+}
+
 /* Отображаем инфу о погоде на стрнице */
 const infoWeather = new InfoWeather({
   temp: ".page__main-info-temp",
@@ -23,15 +43,10 @@ const infoWeather = new InfoWeather({
   date: ".page__main-info-date",
   cloud: ".page__details-cloud",
   vind: ".page__details-vind",
+  container: ".page__container",
+  mobileContainer: ".page__mobile-background",
   handleShowWeatherTomorrow,
 });
-
-weatherApi
-  .getWeatherInfo("rostov-on-don")
-  .then((weather) => {
-    infoWeather.setWeatherInfo(weather);
-  })
-  .catch((err) => console.log(`catch: ${err}`));
 
 //Отбражаем инфу в Шахтерске и Курске
 shakhtersk.addEventListener("click", () => {
