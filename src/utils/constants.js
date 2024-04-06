@@ -26,3 +26,4 @@ export const defaultBackground = new URL(
   "../images/klaus-wright.jpg",
   import.meta.url
 );
+export const kurssk = new URL("../images/kursk.jpg", import.meta.url);

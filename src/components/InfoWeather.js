@@ -4,6 +4,7 @@ import {
   rostovBackgroundOne,
   donetskBackground,
   defaultBackground,
+  kurssk,
 } from "../utils/constants.js";
 export default class InfoWeather {
   constructor(data) {
@@ -50,6 +51,9 @@ export default class InfoWeather {
     } else if (city === "Makeevka") {
       this._container.style.backgroundImage = `url(${donetskBackground})`;
       this._mobileContainer.style.backgroundImage = `url(${donetskBackground})`;
+    } else if (city === "Kursk") {
+      this._container.style.backgroundImage = `url(${kurssk})`;
+      this._mobileContainer.style.backgroundImage = `url(${kurssk})`;
     } else {
       this._container.style.backgroundImage = `url(${defaultBackground})`;
       this._mobileContainer.style.backgroundImage = `url(${defaultBackground})`;

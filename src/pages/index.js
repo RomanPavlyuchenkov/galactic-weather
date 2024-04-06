@@ -17,7 +17,7 @@ const weatherApi = new WeatherApi({
 });
 
 //Получаем  Ip пользавтеля
-const userIp = new UserIpApi({ url: "http://api.sypexgeo.net/" });
+const userIp = new UserIpApi({ url: "https://api.sypexgeo.net/" });
 userIp
   .getIp()
   .then((ip) => {
