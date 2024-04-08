@@ -23,7 +23,7 @@ export default class InfoWeather {
     const whole = Math.trunc(weather.current.temp_c);
     this._temp.textContent = `${whole}°`;
     weather.location.name === "Makeevka"
-      ? (this._city.textContent = "Донецкая область")
+      ? (this._city.textContent = "Donetsk region")
       : (this._city.textContent = weather.location.name);
     this._condition.textContent = weather.current.condition.text;
     this._date.textContent = weather.location.localtime;
@@ -45,13 +45,17 @@ export default class InfoWeather {
     const randomItem =
       arrayRostov[Math.floor(Math.random() * arrayRostov.length)];
 
-    if (city === "Rostov-On-Don") {
+    if (
+      city === "Rostov-On-Don" ||
+      city === "Rostov-Na-Donu" ||
+      city === "Ростов-на-дону"
+    ) {
       this._container.style.backgroundImage = `url(${randomItem})`;
       this._mobileContainer.style.backgroundImage = `url(${randomItem})`;
     } else if (city === "Makeevka") {
       this._container.style.backgroundImage = `url(${donetskBackground})`;
       this._mobileContainer.style.backgroundImage = `url(${donetskBackground})`;
-    } else if (city === "Kursk") {
+    } else if (city === "Kursk" || city === "Курск") {
       this._container.style.backgroundImage = `url(${kurssk})`;
       this._mobileContainer.style.backgroundImage = `url(${kurssk})`;
     } else {

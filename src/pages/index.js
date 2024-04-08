@@ -4,7 +4,6 @@ import InfoWeather from "../components/InfoWeather.js";
 import SubmitCity from "../components/SubmitCity.js";
 import WeatherTomorrow from "../components/WeatherTomorrow.js";
 import Section from "../components/Section.js";
-import UserIpApi from "../components/UserIpApi.js";
 import {
   kursk,
   shakhtersk,
@@ -15,25 +14,49 @@ import {
 const weatherApi = new WeatherApi({
   authorization: "0d448b1511434f5e8ba121723242703",
 });
+//Узнаем геопозицю
+navigator.geolocation.getCurrentPosition(
+  function (position) {
+    downloadGeolocation(
+      `${position.coords.latitude},${position.coords.longitude}`
+    );
+  },
+  function (error) {
+    console.log("Ошибка определения местоположения: " + error.message);
+    downloadStandardCity("Makeevka");
+  }
+);
 
-//Получаем  Ip пользавтеля
-const userIp = new UserIpApi({ url: "https://api.sypexgeo.net/" });
-userIp
-  .getIp()
-  .then((ip) => {
-    loadingPage(ip.city.name_en);
-  })
-  .catch((err) => console.log(`catch: ${err}`));
-
-//Загружаем страницу
-function loadingPage(city) {
+function downloadGeolocation(geolocation) {
   weatherApi
-    .getWeatherInfo(city)
+    .getWeatherInfo(geolocation)
     .then((weather) => {
       infoWeather.setWeatherInfo(weather);
     })
-    .catch((err) => console.log(`catch: ${err}`));
+    .catch((err) => {
+      console.log(`catch: ${err}`);
+    });
 }
+function downloadStandardCity(geolocation) {
+  weatherApi
+    .getWeatherInfo(geolocation)
+    .then((weather) => {
+      infoWeather.setWeatherInfo(weather);
+    })
+    .catch((err) => {
+      console.log(`catch: ${err}`);
+    });
+}
+//Загружаем страницу
+/* weatherApi
+  .getWeatherInfo("Makeevka")
+  .then((weather) => {
+    infoWeather.setWeatherInfo(weather);
+  })
+  .catch((err) => {
+    console.log(`catch: ${err}`);
+    repitLoadPage();
+  }); */
 
 /* Отображаем инфу о погоде на стрнице */
 const infoWeather = new InfoWeather({
@@ -69,7 +92,7 @@ kursk.addEventListener("click", () => {
 
 rostov.addEventListener("click", () => {
   weatherApi
-    .getWeatherInfo("rostov-on-don")
+    .getWeatherInfo("rostov-na-donu")
     .then((weather) => {
       infoWeather.setWeatherInfo(weather);
     })
