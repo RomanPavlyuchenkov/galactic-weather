@@ -8,6 +8,7 @@ export default class SubmitCity {
     this._form.addEventListener("submit", (evt) => {
       evt.preventDefault();
       this._handleSubmitCity(this._input.value);
+      this._form.reset();
     });
   }
 }

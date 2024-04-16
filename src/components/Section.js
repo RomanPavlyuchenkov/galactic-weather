@@ -9,11 +9,6 @@ export default class Section {
   addItem(element) {
     this._container.prepend(element);
   }
-  renderItems(items) {
-    items.forEach((item) => {
-      this._renderer(item);
-    });
-  }
 
   clearContainer() {
     this._arrayCards = this._container.querySelectorAll(
