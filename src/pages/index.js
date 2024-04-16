@@ -47,16 +47,6 @@ function downloadStandardCity(geolocation) {
       console.log(`catch: ${err}`);
     });
 }
-//Загружаем страницу
-/* weatherApi
-  .getWeatherInfo("Makeevka")
-  .then((weather) => {
-    infoWeather.setWeatherInfo(weather);
-  })
-  .catch((err) => {
-    console.log(`catch: ${err}`);
-    repitLoadPage();
-  }); */
 
 /* Отображаем инфу о погоде на стрнице */
 const infoWeather = new InfoWeather({
